@@ -1,0 +1,42 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.bridgelabz.fundoo.user.configurations.MessagePropertyConfig",
+      "name": "message.controller",
+      "type": "com.bridgelabz.fundoo.user.configurations.MessagePropertyConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.bridgelabz.fundoo.user.configurations.MessagePropertyConfig",
+      "name": "message.controller.activate-msg",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.bridgelabz.fundoo.user.configurations.MessagePropertyConfig",
+      "name": "message.controller.forgot-password-msg",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.bridgelabz.fundoo.user.configurations.MessagePropertyConfig",
+      "name": "message.controller.login-msg",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.bridgelabz.fundoo.user.configurations.MessagePropertyConfig",
+      "name": "message.controller.register-msg",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.bridgelabz.fundoo.user.configurations.MessagePropertyConfig",
+      "name": "message.controller.reset-password-msg",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.bridgelabz.fundoo.user.configurations.MessagePropertyConfig",
+      "name": "message.controller.successful-status",
+      "type": "java.lang.Integer"
+    }
+  ]
+}
