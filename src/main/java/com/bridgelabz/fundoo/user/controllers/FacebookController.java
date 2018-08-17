@@ -10,7 +10,7 @@ import com.bridgelabz.fundoo.user.services.FacebookService;
 @RestController
 public class FacebookController {
 
-	@Autowired///////////////////////////////////
+	@Autowired
 	private FacebookService facebookService;
 
 	@GetMapping("/createFacebookAuthorization")
