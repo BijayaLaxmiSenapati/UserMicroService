@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,7 +20,6 @@ import com.bridgelabz.fundoo.user.models.LoginDTO;
 import com.bridgelabz.fundoo.user.models.RegistrationDTO;
 import com.bridgelabz.fundoo.user.models.ResetPasswordDTO;
 import com.bridgelabz.fundoo.user.models.ResponseDTO;
-import com.bridgelabz.fundoo.user.services.FacebookService;
 import com.bridgelabz.fundoo.user.services.UserService;
 
 @RestController
@@ -33,9 +31,6 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-	
-	@Autowired
-	private FacebookService facebookService;
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public ResponseEntity<ResponseDTO> login(@RequestBody LoginDTO loginDTO, HttpServletResponse response)
