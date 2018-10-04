@@ -1,13 +1,13 @@
 package com.bridgelabz.fundoo.user.repositories;
 
 import java.util.Optional;
-
-import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
-
 import com.bridgelabz.fundoo.user.models.User;
 
-/*public interface UserRepositoryES extends ElasticsearchRepository< User, String > {
+public interface UserRepositoryES {
 
-public Optional<User> findByEmail(String email);
+	public User save(User user);
 
-}*/
+	public Optional<User> findById(String id);
+	
+	public Optional<User> findByEmail(String emailId);
+}

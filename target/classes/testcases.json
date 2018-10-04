@@ -1,0 +1,548 @@
+{
+	"demo": {
+		"request": {
+			"url": "/fundoo/login",
+			"headers": {
+				
+			},
+			"method": "GET"
+		},
+		"response": {
+			"status": "OK",
+			"headers": {
+				"name": "Sid"
+			},
+			"body": {
+				"message": "Shri Ganesha",
+				"status": 100
+			}
+		}
+	},
+	"successfulRegistration": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaithra1234?",
+				"contactNumber": "7377145005",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy",
+				"password": "Chaithra1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "CREATED",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "You are successfully registered",
+				"status": 1
+			}
+		}
+	},
+	"registrationWithWrongEmailIdSyntax": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaithra1234?",
+				"contactNumber": "7377145005",
+				"email": "Shenoy01apr2018@gmail",
+				"name": "Chaithra Shenoy",
+				"password": "Chaithra1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Email Format not correct",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithWrongContactNumSyntax": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaithra1234?",
+				"contactNumber": "73771450",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy",
+				"password": "Chaithra1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Contact number should have 10 digits",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithEmptyNameField": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaithra1234?",
+				"contactNumber": "7377145005",
+				"email": "Shenoy01apr2018@gmail.com",
+				"password": "Chaithra1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "All fields should be filled",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithEmptyEmailField": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaithra1234?",
+				"contactNumber": "7377145005",
+				"email": "",
+				"name": "Chaithra Shenoy",
+				"password": "Chaithra1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "All fields should be filled",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithEmptyContactNumField": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaithra1234?",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy",
+				"password": "Chaithra1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "All fields should be filled",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithEmptyConfirmPasswordField": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"contactNumber": "7377145005",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy",
+				"password": "Chaithra1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "All fields should be filled",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithEmptyPasswordField": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaithra1234?",
+				"contactNumber": "7377145005",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "All fields should be filled",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithUnequalPasswordFields": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaithra12?",
+				"contactNumber": "7377145005",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy",
+				"password": "Chaithra1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Both 'password' and 'confirmPassword' field should have same value",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithLessPasswordCharecter": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaith?",
+				"contactNumber": "7377145005",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy",
+				"password": "Chaith?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Password should have atleast 8 alpha numeric charecters and less than 32 alpha numeric charecters",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithMorePasswordCharecter": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Chaith?12345678901020304050607080",
+				"contactNumber": "7377145005",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy",
+				"password": "Chaith?12345678901020304050607080"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Password should have atleast 8 alpha numeric charecters and less than 32 alpha numeric charecters",
+				"status": -3
+			}
+		}
+	},
+	"reRegistrationWithExistingEmail": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "Aruna1234?",
+				"contactNumber": "9535536188",
+				"email": "arunakush6@gmail.com",
+				"name": "B.H Aruna",
+				"password": "Aruna1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Email id already exists",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithNumericPassword": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "12345678",
+				"contactNumber": "7377145005",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy",
+				"password": "12345678"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Password should have atleast 8 alpha numeric charecters and less than 32 alpha numeric charecters",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithAlphaNumericPhoneField": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "12345678",
+				"contactNumber": "73771450ab",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoy",
+				"password": "12345678"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Contact number should have 10 digits",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithLessCharInName": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "12345678",
+				"contactNumber": "73771450ab",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Ch",
+				"password": "12345678"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Name should have atleast 3 charecters or less than 31 charecters",
+				"status": -3
+			}
+		}
+	},
+	"registrationWithGreaterCharInName": {
+		"request": {
+			"url": "/fundoo/register",
+			"headers": {
+				
+			},
+			"body": {
+				"confirmPassword": "12345678",
+				"contactNumber": "73771450ab",
+				"email": "Shenoy01apr2018@gmail.com",
+				"name": "Chaithra Shenoyqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+				"password": "12345678"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Name should have atleast 3 charecters or less than 31 charecters",
+				"status": -3
+			}
+		}
+	},
+	"successfulLogin": {
+		"request": {
+			"url": "/fundoo/login",
+			"headers": {
+				
+			},
+			"body": {
+				"email": "arunakush6@gmail.com",
+				"password": "Aruna1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "OK",
+			"headers": {
+				"token": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI1YjdmZTBjMzQ5MzA0ZDE1MDExYzkwMDEifQ.qolE6q-w9nTUZRD8h3ZH4UJtw1A67DOMygOXGkbqW1kiG2RNKxgeiBavjo6ddloZIwW_gmlAXaTR646D37Dglw"
+			},
+			"body": {
+				"message": "You are successfully logged in",
+				"status": 1
+			}
+		}
+	},
+	"unavailableLoginCredential": {
+		"request": {
+			"url": "/fundoo/login",
+			"headers": {
+				
+			},
+			"body": {
+				"email": "bijaya.8434@gmail.com",
+				"password": "Bijaya1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+
+			},
+			"body": {
+				"message": "Email id not present",
+				"status": -2
+			}
+		}
+	},
+	"loginWithWrongPassword": {
+		"request": {
+			"url": "/fundoo/login",
+			"headers": {
+				
+			},
+			"body": {
+				"email": "arunakush6@gmail.com",
+				"password": "Aru1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+
+			},
+			"body": {
+				"message": "Wrong Password given",
+				"status": -2
+			}
+		}
+	},
+	"loginWithEmptyEmailField": {
+		"request": {
+			"url": "/fundoo/login",
+			"headers": {
+				
+			},
+			"body": {
+				"email": "",
+				"password": "Aru1234?"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+
+			},
+			"body": {
+				"message": "All fields should be filled",
+				"status": -2
+			}
+		}
+	},
+	"loginWithEmptyEmailAndPasswordField": {
+		"request": {
+			"url": "/fundoo/login",
+			"headers": {
+				
+			},
+			"body": {
+				"email": "",
+				"password": ""
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+
+			},
+			"body": {
+				"message": "All fields should be filled",
+				"status": -2
+			}
+		}
+	}
+}

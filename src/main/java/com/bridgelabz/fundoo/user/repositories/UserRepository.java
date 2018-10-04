@@ -8,5 +8,6 @@ import com.bridgelabz.fundoo.user.models.User;
 public interface UserRepository extends MongoRepository<User, String> {
 
 	public Optional<User> findByEmail(String email);
+	public User save(User user);
 
 }

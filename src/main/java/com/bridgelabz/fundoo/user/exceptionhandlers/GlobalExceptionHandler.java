@@ -50,7 +50,7 @@ public class GlobalExceptionHandler {
 	 * @param e
 	 * @return
 	 */
-	@ExceptionHandler(Exception.class)
+	/*@ExceptionHandler(Exception.class)
 	public ResponseEntity<ResponseDTO> handleGenericException(Exception e) {
 
 		LOGGER.error(e.getMessage());
@@ -59,6 +59,6 @@ public class GlobalExceptionHandler {
 		responseDTO.setMessage("Something went wrong");
 		responseDTO.setStatus(-1);
 		return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
-	}
+	}*/
 }
 

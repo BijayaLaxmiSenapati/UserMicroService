@@ -10,8 +10,7 @@ import org.springframework.web.context.WebApplicationContext;
 import com.bridgelabz.fundoo.user.models.Email;
 import com.bridgelabz.fundoo.user.services.EmailService;
 
-
-@Component
+//@Component
 public class ConsumerImpl implements Consumer {
 	@Autowired
 	private WebApplicationContext context;

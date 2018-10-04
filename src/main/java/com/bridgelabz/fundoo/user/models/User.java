@@ -3,7 +3,9 @@ package com.bridgelabz.fundoo.user.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
 @Document(collection = "Users")
+//@Document(indexName="userindex", type="Users")
 public class User {
 
 	@Id
@@ -18,6 +20,8 @@ public class User {
 	private String password;
 
 	private boolean activationStatus;
+	
+	private String profilePicture;
 
 	public String getName() {
 		return name;
@@ -65,6 +69,14 @@ public class User {
 
 	public void setActivationStatus(boolean activationStatus) {
 		this.activationStatus = activationStatus;
+	}
+
+	public String getProfilePicture() {
+		return profilePicture;
+	}
+
+	public void setProfilePicture(String profilePicture) {
+		this.profilePicture = profilePicture;
 	}
 
 	@Override
